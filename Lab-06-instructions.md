@@ -26,6 +26,12 @@ If you are using your own PC, you need to install MobaXTerm.
 
 Only one person per team needs to have X-windows working for this lab.
 
+> **Some notes on working as a group**
+
+> It is important that you all track what is happening on the console. Take turns operating the keyboard. Each command should be discussed and everyone should be aware that a new command is being issued. It is not acceptable to have the strongest technologist in the group simply do the work. 
+
+> Although you will be graded as a group on this assignment, questions regarding it will appear on your individual quizzes and the final. So you need to understand what is being done.
+
 ## Getting started
 
 Four pairs of virtual machines have been created:
