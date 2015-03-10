@@ -69,16 +69,26 @@ Note that you need to change the literal string "yourNerviosIP" in the URL. You 
 
 at the command prompt.
 
+From the main Nagios screen, click on the "Hosts" link to the right. You should see a screen with two hosts, like this:
+
+![](nagios1.png)
+
+Take a screen shot and post to Blackboard.
+
 Test that your monitoring is working correctly by issuing the command
 
     vagrant halt manosXX
 
 replacing the XX as appropriate for your team.
 
-In 5 minutes, you should see an error on the web portal. Restart your manos server:
+In 5 minutes, you should see an error on the web portal, like this:
+
+![](nagios2.png)
+
+Take a screen shot and post to Blackboard.
+
+Restart your manos server:
 
     vagrant up manosXX
 
 and observe the result on your web portal.
-
-Finally, take a screen shot and post it to Blackboard as evidence you have completed the assignment.
