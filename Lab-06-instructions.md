@@ -2,7 +2,7 @@
 
 In this lab, you will assemble into your teams and install the open source monitoring tool Nagios in a client-server configuration.
 
-YOU WILL BE GRADED ON THIS LAB.
+YOU WILL BE GRADED ON THIS LAB. It is due by Sunday, March 22.
 
 ## Configuring X windows
 
@@ -35,23 +35,31 @@ manos02, nervios02
 manos03, nervios03
 manos04, nervios04
 ````
+
+The machines all have the LAMP stack already installed, so you don't need to do that.
+
 The goal is to
 
 * install the Nagios server on your nervios instance
 * install the Nagios agent on your manos instance
 * configure Nagios to monitor your manos instance
-* test that it is working by halting manos and observing the result
-* further test by bringing manos back up and observing the result
+* confirm that manos is being monitored
+* test monitoring by halting manos and observing the result
 
 ## Steps
 
-First, log into the nervios instance appropriate to your team.
+First, log into the nervios instance appropriate to your team (each team has a number 1-4).
+
+IMPORTANT: DO NOT USE "vagrant ssh." Instead, log in using ssh:
+
+    ssh vagrant@192.168.33.4X    # for manosXX, X=1-4
+    ssh vagrant@192.168.33.5X    # for nerviosXX, X=1-4
 
 The instructions we will follow this time are at:
 
 http://www.unixmen.com/install-configure-nagios-4-ubuntu-14-1014-04/
 
-At this point, you should have the command line skills to install and configure nagios based on these directions, which will not be repeated here.
+At this point, you should have the command line skills to install and configure nagios based on these directions, which will not be repeated or elaborated here.
 
 Towards the end of the directions, you will log into manosXX (again the instance appropriate to your team) and configure it so that it can be monitored by the nagios server.
 
@@ -61,23 +69,19 @@ You can log in and see your nagios instance by opening a new ssh session into se
 
     firefox -X -no-remote
 
-The URL is http://yourNerviosIP/nagios
+The URL is http://192.168.33.5X/nagios
 
-Note that you need to change the literal string "yourNerviosIP" in the URL. You can determine the IP address of your server by vagrant ssh'ing into it and issuing the command
-
-    ifconfig
-
-at the command prompt.
+Note that you need to change "5X" appropriately, as above.
 
 From the main Nagios screen, click on the "Hosts" link to the right. You should see a screen with two hosts, like this:
 
 ![](nagios1.png)
 
-Take a screen shot and post to Blackboard.
+Take a screen shot and save.
 
-Test that your monitoring is working correctly by issuing the command
+Test that your monitoring is working correctly by going back into your VM and issuing the command
 
-    vagrant halt manosXX
+    sudo halt
 
 replacing the XX as appropriate for your team.
 
@@ -85,10 +89,8 @@ In 5 minutes, you should see an error on the web portal, like this:
 
 ![](nagios2.png)
 
-Take a screen shot and post to Blackboard.
+Take a screen shot; combine it with your previous screen shot (e.g. in Powerpoint or as a PDF) and post to Blackboard.
 
-Restart your manos server:
+If you wish, ask the instructor to restart your machine and observe the result. (Not required.)
 
-    vagrant up manosXX
-
-and observe the result on your web portal.
+You are now complete.
