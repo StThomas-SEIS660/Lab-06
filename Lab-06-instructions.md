@@ -10,9 +10,11 @@ We will spend some time as a class determining whether and how X-windows is work
 
 To use X-windows, you need to be logged into seis660 but NOT into a VM.
 
-If you are going to use X-windows, you should log in with the following options:
+If you are going to use X-windows, you should log in with the following options if you are on a Mac:
 
     ssh -XC -c blowfish-cbc,arcfour  yourID@seis660.gps.stthomas.edu
+    
+If you are on a PC using Putty or MobaXterm, you will have a checkbox (that may have defaulted to checked) to enable X. You're on your own to figure out compression options. 
 
 The extra options are so that X-windows performs better (they make a big difference!)
 
