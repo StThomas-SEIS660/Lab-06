@@ -87,7 +87,7 @@ From the main Nagios screen, click on the "Hosts" link to the right. You should 
 
 Take a screen shot and save.
 
-Test that your monitoring is working correctly by going back into your VM and issuing the command
+Test that your monitoring is working correctly by going back into your MANOS VM (192.168.33.4X) and issuing the command
 
     sudo halt
 
