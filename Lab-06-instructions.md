@@ -56,12 +56,16 @@ The goal is to
 
 ## Steps
 
-First, log into the nervios instance appropriate to your team (each team has a number 1-4).
+You have a manos and a nervios instance appropriate to your team (each team has a number 1-4)
+
+    vagrant@192.168.33.4X    # for manosXX, X=1-4
+    vagrant@192.168.33.5X    # for nerviosXX, X=1-4
+
+First, log into the nervios instance appropriate to your team 
 
 IMPORTANT: DO NOT USE "vagrant ssh." Instead, log in using ssh:
 
-    ssh vagrant@192.168.33.4X    # for manosXX, X=1-4
-    ssh vagrant@192.168.33.5X    # for nerviosXX, X=1-4
+    ssh vagrant@192.168.33.5X 
 
 The instructions we will follow this time are at:
 
@@ -69,7 +73,15 @@ http://www.unixmen.com/install-configure-nagios-4-ubuntu-14-1014-04/
 
 At this point, you should have the command line skills to install and configure nagios based on these directions, which will not be repeated or elaborated here.
 
-Towards the end of the directions, you will log into manosXX (again the instance appropriate to your team) and configure it so that it can be monitored by the nagios server.
+Towards the end of the directions, you will see:
+
+*Add Monitoring targets to Nagios server*
+
+At this point, log into manosXX 
+
+    ssh vagrant@192.168.33.4X 
+
+(again the instance appropriate to your team) and configure it so that it can be monitored by the nagios server.
 
 You will then make a final configuration file change on nervios and restart nagios. If you have followed the instructions correctly, it should start monitoring your manos instance.
 
